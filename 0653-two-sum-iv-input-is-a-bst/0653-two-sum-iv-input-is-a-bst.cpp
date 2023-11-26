@@ -9,63 +9,63 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+class BSTIterator {
+    
+    private: 
+    stack<TreeNode*> s;
+    bool isreverse;
+    
+    void pushAll(TreeNode* root){
+        if(root==NULL) return;
+        
+        s.push(root);
+        if(!isreverse) pushAll(root->left); 
+        else pushAll(root->right);
+    }
+public:
+    BSTIterator(TreeNode* root,bool reverse) {
+        this->isreverse=reverse;
+        pushAll(root);
+    }
+    
+    int next() {
+        TreeNode *current=s.top();
+        s.pop();
+        if(!isreverse){
+            if(current->right){
+                pushAll(current->right);
+            }
+        }else{
+            if(current->left){
+                pushAll(current->left);
+            }
+        }
+        return current->val;   
+    }
+    
+    bool hasNext() {
+        bool size=s.size();
+        return size;
+        
+    }
+};
+
+
+
 class Solution {
 public:
-    
-    template <typename X, typename Y>
-    class Pair{
-        public:
-        X x;
-        Y y;
-        Pair(X x,Y y){
-            this->x = x;
-            this->y = y;
-        }
-    };
-
-    void addNodesToVector(TreeNode* root,vector<TreeNode*>& v){
-        if(root == NULL){
-            return ;
-        }
-        v.push_back(root);
-        addNodesToVector(root->left,v);
-        addNodesToVector(root->right,v);
-
-    }
-
-   static bool compareNodes(TreeNode* a, TreeNode* b) {
-        return a->val< b->val;
-    }
-
-    // 2
-    bool PairSum2(TreeNode* root,int k){
-        vector<TreeNode*> vec;
-        addNodesToVector(root,vec);
-        // Sort the vector of nodes based on data values
-        sort(vec.begin(), vec.end(), compareNodes);
-        int i=0;
-        int j=vec.size()-1;
+    bool findTarget(TreeNode* root, int k) {
+        if(root==NULL) return false;
+        BSTIterator l(root,false);
+        BSTIterator r(root,true);
+        int i=l.next();
+        int j=r.next();
         while(i<j){
-            if(vec[i]->val + vec[j]->val == k){
-                return true;
-                i++;
-                j--;
-            }
-            else if(vec[i]->val + vec[j]->val < k){
-                i++;
-
-            }
-            else{
-                j--;
-            }
-
-
+            if(i+j==k) return true;
+            else if(i+j<k) i=l.next();
+            else j=r.next();
         }
         return false;
-    }
-
-    bool findTarget(TreeNode* root, int k) {
-        return PairSum2(root,k);
         
         
     }
