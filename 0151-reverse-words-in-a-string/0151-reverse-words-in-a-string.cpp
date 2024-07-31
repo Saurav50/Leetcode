@@ -6,13 +6,15 @@ public:
             int i=0,N=s.length();
             while(i<N){
                 while(i<N&&s[i]==' ') i++;
-                if (i >= N) break;
+                // if (i >= N) break;
                 int j=i+1;
                 while(j<N&&s[j]!=' ') j++;
                 
                string w=s.substr(i,j-i);
+               if(w.length()>0){
                 if(ans.length()>0) ans=w+" "+ans;
                 else ans+=w;
+               }
                 i=j+1;
             }
           
