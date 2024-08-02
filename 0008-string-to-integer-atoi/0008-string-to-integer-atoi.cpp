@@ -38,9 +38,9 @@ unordered_map<char, int> map = {
 };
 
         for(int i=0;i<ans.length();i++){
-             if (isNegative && -(num+(map[ans[i]])*(pow(10,p))) < INT_MIN) return INT_MIN;
-             if (!isNegative && (num+(map[ans[i]])*(pow(10,p))) > INT_MAX) return INT_MAX;
-            num+=(map[ans[i]])*(pow(10,p));
+             if (isNegative && -(num+(ans[i]-'0')*(pow(10,p))) < INT_MIN) return INT_MIN;
+             if (!isNegative && (num+(ans[i]-'0')*(pow(10,p))) > INT_MAX) return INT_MAX;
+            num+=(ans[i]-'0')*(pow(10,p));
             p--;
         }
        
