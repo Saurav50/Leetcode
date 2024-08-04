@@ -1,20 +1,43 @@
 class Solution {
 public:
+    void computeLPS(vector<int>& LPS,string needle){
+        int i=1,len=0;
+        LPS[0]=0;
+        while(i<needle.length()){
+            if(needle[i]==needle[len]){
+                len++;
+                LPS[i]=len;
+                i++;
+            }else{
+                if(len!=0){
+                    len=LPS[len-1];
+                }else{
+                    LPS[i]=0;
+                    i++;
+                }
+            }
+        }
+        
+    }
     int strStr(string haystack, string needle) {
         int i=0,j=0;
         int n1=haystack.length(),n2=needle.length();
         if(n1<n2) return -1;
-        if(n1==n2&&haystack==needle) return 0;
-        for(int i=0;i<n1-n2+1;i++){
-            // string temp="";
-            for(int j=0;j<n2;j++){
-                // temp+=haystack[i+j];
-                if(haystack[i+j]!=needle[j]) break;
-                if(j==n2-1) return i;
-            }
-            // if(temp==needle) return i;
+        if(haystack==needle) return 0;
 
+        // compute pie/lps table
+        vector<int> LPS(n2,0);
+        computeLPS(LPS,needle);
+        while(i<n1){
+            if(haystack[i]==needle[j]){
+                i++,j++;
+            }else{
+                if(j!=0) j=LPS[j-1];
+                else i++;
+            }
+            if(j==n2) return i-j;
         }
+        
         return -1;
     }
 };
