@@ -39,6 +39,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0646-maximum-length-of-pair-chain](https://github.com/Saurav50/Leetcode/tree/master/0646-maximum-length-of-pair-chain) |
 | [0713-subarray-product-less-than-k](https://github.com/Saurav50/Leetcode/tree/master/0713-subarray-product-less-than-k) |
 | [0940-fruit-into-baskets](https://github.com/Saurav50/Leetcode/tree/master/0940-fruit-into-baskets) |
+| [1036-rotting-oranges](https://github.com/Saurav50/Leetcode/tree/master/1036-rotting-oranges) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -137,4 +138,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0937-online-stock-span](https://github.com/Saurav50/Leetcode/tree/master/0937-online-stock-span) |
+## Breadth-First Search
+|  |
+| ------- |
+| [1036-rotting-oranges](https://github.com/Saurav50/Leetcode/tree/master/1036-rotting-oranges) |
+## Matrix
+|  |
+| ------- |
+| [1036-rotting-oranges](https://github.com/Saurav50/Leetcode/tree/master/1036-rotting-oranges) |
 <!---LeetCode Topics End-->
