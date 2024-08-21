@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/Saurav50/Leetcode/tree/master/0042-trapping-rain-water) |
+| [0078-subsets](https://github.com/Saurav50/Leetcode/tree/master/0078-subsets) |
 | [0084-largest-rectangle-in-histogram](https://github.com/Saurav50/Leetcode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0152-maximum-product-subarray](https://github.com/Saurav50/Leetcode/tree/master/0152-maximum-product-subarray) |
 | [0239-sliding-window-maximum](https://github.com/Saurav50/Leetcode/tree/master/0239-sliding-window-maximum) |
@@ -148,4 +149,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1036-rotting-oranges](https://github.com/Saurav50/Leetcode/tree/master/1036-rotting-oranges) |
+## Backtracking
+|  |
+| ------- |
+| [0078-subsets](https://github.com/Saurav50/Leetcode/tree/master/0078-subsets) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0078-subsets](https://github.com/Saurav50/Leetcode/tree/master/0078-subsets) |
 <!---LeetCode Topics End-->
