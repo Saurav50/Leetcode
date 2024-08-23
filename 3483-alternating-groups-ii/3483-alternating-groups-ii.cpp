@@ -1,58 +1,47 @@
 class Solution {
 public:
     int numberOfAlternatingGroups(vector<int>& colors, int k) {
-        int i=0,j=0,n=colors.size();
-        map<int,int> map;
-        int c=j;
-        bool isAlternative=true;
-        int idx=-1;
-        int count=0;
-        while(i<n){
-            map[colors[j]]++;
-            if(c-i+1<k){
-                if (j != i && j != 0 && (colors[j] == colors[j-1] )) {
-                    isAlternative = false;
-                    idx = j;
-                }
-                j = (j + 1) % n;
-                c++;
+
+        int i = 0;
+        int j = 1;
+        int count = 0;
+        deque<int> dq;
+        int check = true;
+        int indx = INT_MIN;
+        queue<int> q;
+
+        dq.push_back(colors[0]);
+       
+        j = 1;
+
+        while (j < colors.size() + k - 1) {
+
+            if (dq.size() && (dq.back() == colors[j % colors.size()] ||
+                              dq.front() == dq.back())) {
+                q.push(j - 1);
             }
-            else if(c-i+1==k){
-                if (j != i && j != 0 && colors[j] == colors[j - 1]) {
-                    isAlternative = false;
-                    idx = j;
+
+            dq.push_back(colors[j % colors.size()]);
+
+            if (dq.size() == 3) {
+                dq.pop_front();
+            }
+
+            if (j - i + 1 < k) {
+                j++;
+            }
+
+            else if (j - i + 1 == k) {
+
+                if (q.front() == i) {
+                    q.pop();
                 }
-                if(j==0&&i>j&&colors[j] == colors[n-1]){
-                    isAlternative = false;
-                    idx = n+j;
+
+                if (q.size() == 0) {
+                    count++;
                 }
-                if(j!=0&&i>j&&colors[j] == colors[j-1]){
-                    isAlternative = false;
-                    idx = n+j;
-                }
-                if(map.find(0)!=map.end()&&map.find(1)!=map.end()){
-                    if(k%2==0&&map[0]==map[1]){
-                        // check for alternative
-                        if(isAlternative) count++;
-                    }else if(k%2!=0&&((map[0]==map[1]+1)||(map[1]==map[0]+1))){
-                        // check for consecutive
-                         if(isAlternative) count++;
-                    }
-                }
-                    // Slide the window
-                    map[colors[i]]--;
-                    if (map[colors[i]] == 0) map.erase(colors[i]);
-                    i++;
-                    j = (j + 1) % n;
-                    c++;
-                    
-                    // Reset isAlternative if idx is not within the current window
-                   
-                    if (idx <= i) {
-                        
-                        isAlternative = true;
-                    }
-                
+                i++;
+                j++;
             }
         }
         return count;
