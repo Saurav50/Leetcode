@@ -45,6 +45,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0713-subarray-product-less-than-k](https://github.com/Saurav50/Leetcode/tree/master/0713-subarray-product-less-than-k) |
 | [0940-fruit-into-baskets](https://github.com/Saurav50/Leetcode/tree/master/0940-fruit-into-baskets) |
 | [1036-rotting-oranges](https://github.com/Saurav50/Leetcode/tree/master/1036-rotting-oranges) |
+| [3483-alternating-groups-ii](https://github.com/Saurav50/Leetcode/tree/master/3483-alternating-groups-ii) |
 | [3522-find-the-power-of-k-size-subarrays-i](https://github.com/Saurav50/Leetcode/tree/master/3522-find-the-power-of-k-size-subarrays-i) |
 | [3523-find-the-power-of-k-size-subarrays-ii](https://github.com/Saurav50/Leetcode/tree/master/3523-find-the-power-of-k-size-subarrays-ii) |
 ## Dynamic Programming
@@ -112,6 +113,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0239-sliding-window-maximum](https://github.com/Saurav50/Leetcode/tree/master/0239-sliding-window-maximum) |
 | [0713-subarray-product-less-than-k](https://github.com/Saurav50/Leetcode/tree/master/0713-subarray-product-less-than-k) |
 | [0940-fruit-into-baskets](https://github.com/Saurav50/Leetcode/tree/master/0940-fruit-into-baskets) |
+| [3483-alternating-groups-ii](https://github.com/Saurav50/Leetcode/tree/master/3483-alternating-groups-ii) |
 | [3522-find-the-power-of-k-size-subarrays-i](https://github.com/Saurav50/Leetcode/tree/master/3522-find-the-power-of-k-size-subarrays-i) |
 | [3523-find-the-power-of-k-size-subarrays-ii](https://github.com/Saurav50/Leetcode/tree/master/3523-find-the-power-of-k-size-subarrays-ii) |
 ## Greedy
