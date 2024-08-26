@@ -94,6 +94,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0013-roman-to-integer](https://github.com/Saurav50/Leetcode/tree/master/0013-roman-to-integer) |
 | [0050-powx-n](https://github.com/Saurav50/Leetcode/tree/master/0050-powx-n) |
+| [0060-permutation-sequence](https://github.com/Saurav50/Leetcode/tree/master/0060-permutation-sequence) |
 ## Trie
 |  |
 | ------- |
@@ -140,6 +141,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0050-powx-n](https://github.com/Saurav50/Leetcode/tree/master/0050-powx-n) |
+| [0060-permutation-sequence](https://github.com/Saurav50/Leetcode/tree/master/0060-permutation-sequence) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
