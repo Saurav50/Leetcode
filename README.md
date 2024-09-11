@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0165-compare-version-numbers](https://github.com/Saurav50/Leetcode/tree/master/0165-compare-version-numbers) |
 | [0455-assign-cookies](https://github.com/Saurav50/Leetcode/tree/master/0455-assign-cookies) |
 | [0658-find-k-closest-elements](https://github.com/Saurav50/Leetcode/tree/master/0658-find-k-closest-elements) |
+| [0696-count-binary-substrings](https://github.com/Saurav50/Leetcode/tree/master/0696-count-binary-substrings) |
 ## Array
 |  |
 | ------- |
@@ -101,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0165-compare-version-numbers](https://github.com/Saurav50/Leetcode/tree/master/0165-compare-version-numbers) |
 | [0242-valid-anagram](https://github.com/Saurav50/Leetcode/tree/master/0242-valid-anagram) |
 | [0686-repeated-string-match](https://github.com/Saurav50/Leetcode/tree/master/0686-repeated-string-match) |
+| [0696-count-binary-substrings](https://github.com/Saurav50/Leetcode/tree/master/0696-count-binary-substrings) |
 ## Math
 |  |
 | ------- |
