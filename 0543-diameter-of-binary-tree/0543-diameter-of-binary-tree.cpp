@@ -9,36 +9,26 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class HieghtDiaPair{
-    public:
-    int height;
-    int dia;
-    HieghtDiaPair(int h,int d){
-        this->height=h;
-        this->dia=d;
-    }
-};
-
 class Solution {
 public:
-    
-    HieghtDiaPair * diameterBetter(TreeNode* root){
-    if(root==NULL){
-        HieghtDiaPair *hdp=new HieghtDiaPair(0,0);
-        return hdp;
+    int calHeight(TreeNode* root){
+        if(root==NULL) return 0;
+        return max(calHeight(root->left),calHeight(root->right))+1;
     }
-    HieghtDiaPair * leftSubtreeInfo = diameterBetter(root->left);
-    HieghtDiaPair * rightSubtreeInfo =diameterBetter(root->right);
-    HieghtDiaPair * infoOfRoot = new HieghtDiaPair(1+ max( leftSubtreeInfo->height,rightSubtreeInfo->height),max(leftSubtreeInfo->dia,max(leftSubtreeInfo->height+rightSubtreeInfo->height,rightSubtreeInfo->dia)));
-    return infoOfRoot;
-}
-    
-       
     int diameterOfBinaryTree(TreeNode* root) {
-            if(root==NULL) return 0;
-    HieghtDiaPair *ans=diameterBetter(root);
-    return ans->dia;
-        
-        
+        queue<TreeNode*> q;
+        q.push(root);
+        int ans=INT_MIN;
+        while(!q.empty()){
+            TreeNode* front=q.front();
+            q.pop();
+            int leftHeight=calHeight(front->left);
+            int rightHeight=calHeight(front->right);
+            ans=max(ans,leftHeight+rightHeight);
+            if(front->left) q.push(front->left);
+            if(front->right) q.push(front->right);
+        }
+        return ans;
+
     }
 };
