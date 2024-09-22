@@ -11,24 +11,21 @@
  */
 class Solution {
 public:
-    int calHeight(TreeNode* root){
-        if(root==NULL) return 0;
-        return max(calHeight(root->left),calHeight(root->right))+1;
+    pair<int,int> calHeight(TreeNode* root){
+        if(root==NULL){
+            return {0,0};
+        }
+        pair<int,int> l=calHeight(root->left);
+        pair<int,int> r=calHeight(root->right);
+        int h=max(l.first,r.first)+1;
+        int d=l.first+r.first;
+        int dia=max(l.second,max(r.second,d));
+        return {h,dia};
     }
     int diameterOfBinaryTree(TreeNode* root) {
-        queue<TreeNode*> q;
-        q.push(root);
-        int ans=INT_MIN;
-        while(!q.empty()){
-            TreeNode* front=q.front();
-            q.pop();
-            int leftHeight=calHeight(front->left);
-            int rightHeight=calHeight(front->right);
-            ans=max(ans,leftHeight+rightHeight);
-            if(front->left) q.push(front->left);
-            if(front->right) q.push(front->right);
-        }
-        return ans;
+        
+        pair<int,int> p=calHeight(root);
+        return p.second;
 
     }
 };
