@@ -9,19 +9,32 @@
  */
 class Solution {
 public:
+    bool genPath(TreeNode* root,vector<TreeNode*>&path,TreeNode* k){
+        if(root==NULL) return false;
+        if(root==k){
+            path.push_back(root);
+            return true;
+        }
+        path.push_back(root);
+        if(genPath(root->left,path,k)||genPath(root->right,path,k)){
+            return true;
+        }
+        path.pop_back();
+        return false;
+    }
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        if(root == NULL) return NULL;
-        if(root->val == p->val || root->val == q->val) return root;
-        TreeNode* left = lowestCommonAncestor(root->left,p,q);
-        TreeNode* right = lowestCommonAncestor(root->right,p,q);
-        if(left != NULL && right != NULL) return root;
-        else if(left!=NULL && right==NULL){
-            return left;
+        vector<TreeNode*> pathP;
+        vector<TreeNode*> pathQ;
+        genPath(root,pathP,p);
+        genPath(root,pathQ,q);
+        int i = 0;
+        while (i < pathP.size() && i < pathQ.size() && pathP[i] == pathQ[i]) {
+            i++;
         }
-        else if(left==NULL && right!=NULL){
-            return right;
-        }
-        else return NULL;
-        
+
+        // The LCA is the last common node
+        return pathP[i - 1];
+       
+
     }
 };
