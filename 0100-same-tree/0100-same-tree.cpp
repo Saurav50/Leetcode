@@ -11,27 +11,11 @@
  */
 class Solution {
 public:
-    bool isSameTree(TreeNode* root1, TreeNode* root2) {
-            if(!root1 && !root2) return true;
-    if((!root1&& root2)|| (root1&&!root2))return false;
-    //    cout<<"comparing "<<root1->data<<","<<root2->data<<endl;
-    bool ans=false;
-    if(root1->val==root2->val){
-        ans=true;
-    }
-        bool childans=isSameTree(root1->left,root2->left);
-        if(childans==false){
-            ans=false;
-            return ans;
-        
-        }
-        bool childans2=isSameTree(root1->right,root2->right);
-         if(childans2==false){
-            ans=false;
-             return ans;
-        }
-        
-    return ans;
-        
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(p==NULL&&q==NULL) return true;
+        if(p==NULL||q==NULL) return false;
+        if(p->val!=q->val) return false;
+        return isSameTree(p->left,q->left)&&isSameTree(p->right,q->right);
+        return true;
     }
 };
