@@ -9,25 +9,18 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-#include <climits>
-#include <iostream>
 class Solution {
 public:
-int maxPathSum(TreeNode * root, int & maxi) {
-  if (root == NULL) return 0;
-
-  int leftMaxPath = max(0, maxPathSum(root -> left, maxi));
-  int rightMaxPath = max(0, maxPathSum(root -> right, maxi));
-  int val = root -> val;
-  maxi = max(maxi, (leftMaxPath + rightMaxPath) + val);
-  return max(leftMaxPath, rightMaxPath) + val;
-
-}
-
-int maxPathSum(TreeNode * root) {
-  int maxi = INT_MIN;
-  maxPathSum(root, maxi);
-  return maxi;
-
-}
+    int maxPathSumCall(TreeNode* root,int &maxi) {
+        if(root==NULL) return 0;
+        int leftS=max(0,maxPathSumCall(root->left,maxi));
+        int rightS=max(0,maxPathSumCall(root->right,maxi));
+        maxi=max(maxi,leftS+rightS+root->val);
+        return root->val+max(leftS,rightS);
+    }
+    int maxPathSum(TreeNode* root){
+        int maxi=INT_MIN;
+        maxPathSumCall(root,maxi);
+        return maxi;
+    }
 };
