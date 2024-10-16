@@ -11,43 +11,26 @@
  */
 class Solution {
 public:
-    
-    //Tree construct using inorder Nd postOrder
-    TreeNode* ConstructTreePost(vector<int>& inOrder, vector<int>& postOrder,int inS,int inE,int postS,int postE){
-        if (inS > inE || postS > postE) return NULL;
-        TreeNode *root = new TreeNode(postOrder[postE]); 
-        int rootIndex=-1;
-        int rootData=postOrder[postE];
-        for(int i=inS;i<=inE;i++){
-            if(inOrder[i]==rootData){
-                rootIndex=i;
-                break;
-            }
-        }
-        //left subtree
-        int LinS=inS;
-        int LinE=rootIndex-1;
-        int LpostS=postS;
-        int LpostE=LpostS+(LinE-LinS);
-        root->left=ConstructTreePost(inOrder,postOrder,LinS,LinE,LpostS,LpostE);
-        //right subtree
-        int RinS=rootIndex+1;
-        int RinE=inE;
-        int RpostS=LpostE+1;
-        int RpostE=postE-1;
-        root->right=ConstructTreePost(inOrder,postOrder,RinS,RinE,RpostS,RpostE);
+    TreeNode* buildTreeCall(vector<int>& postorder,int ps,int pe,vector<int>& inorder,int is,int ie,map<int,int> &inorderMap){
+        if (ps > pe || is > ie) return NULL;
+
+        TreeNode* root = new TreeNode(postorder[pe]);
+        int rootidx=inorderMap[postorder[pe]];
+        TreeNode* leftSubTree=buildTreeCall(postorder,ps,ps+rootidx-is-1,inorder,is,rootidx-1,inorderMap);
+        TreeNode* rightSubTree=buildTreeCall(postorder,ps+rootidx-is,pe-1,inorder,rootidx+1,ie,inorderMap);
+        root->left=leftSubTree;
+        root->right=rightSubTree;
+
         return root;
     }
-
-
-    
-    
-    
-    
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
-        int size=inorder.size();
-        return ConstructTreePost(inorder,postorder,0,size-1,0,size-1);
-        
+        if(postorder.size()==0) return NULL;
+        map<int,int> inorderMap;
+        for(int i=0;i<inorder.size();i++){
+            inorderMap[inorder[i]]=i;
+        }
+        TreeNode* root=buildTreeCall(postorder,0,postorder.size()-1,inorder,0,inorder.size()-1,inorderMap);
+        return root;
         
     }
 };
