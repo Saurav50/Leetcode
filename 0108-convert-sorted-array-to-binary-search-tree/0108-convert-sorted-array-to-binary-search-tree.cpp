@@ -11,25 +11,16 @@
  */
 class Solution {
 public:
-    
-    
-    TreeNode* constructBstHelper(vector<int>& arr,int start,int end){
-         if (start > end) {
-            return NULL; // Base case: empty subtree
-        }
+    TreeNode* helper(vector<int>& nums,int start,int end){
+        if(start>end) return NULL;
         int mid=(start+end)/2;
-        TreeNode* root= new TreeNode(arr[mid]);
-
-        root->left = constructBstHelper(arr,start,mid-1);
-        root->right=constructBstHelper(arr,mid+1,end);
+        TreeNode* root=new TreeNode(nums[mid]);
+        root->left=helper(nums,start,mid-1);
+        root->right=helper(nums,mid+1,end);
         return root;
     }
-    
     TreeNode* sortedArrayToBST(vector<int>& nums) {
-    if (nums.size() <= 0) {
-        return NULL;
-    }
-    return constructBstHelper(nums, 0, nums.size()- 1);
-        
+        if(nums.size()==0) return NULL;
+        return helper(nums,0,nums.size()-1);
     }
 };
