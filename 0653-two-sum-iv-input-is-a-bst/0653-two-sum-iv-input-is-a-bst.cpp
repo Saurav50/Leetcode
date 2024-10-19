@@ -9,64 +9,24 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class BSTIterator {
-    
-    private: 
-    stack<TreeNode*> s;
-    bool isreverse;
-    
-    void pushAll(TreeNode* root){
-        if(root==NULL) return;
-        
-        s.push(root);
-        if(!isreverse) pushAll(root->left); 
-        else pushAll(root->right);
-    }
-public:
-    BSTIterator(TreeNode* root,bool reverse) {
-        this->isreverse=reverse;
-        pushAll(root);
-    }
-    
-    int next() {
-        TreeNode *current=s.top();
-        s.pop();
-        if(!isreverse){
-            if(current->right){
-                pushAll(current->right);
-            }
-        }else{
-            if(current->left){
-                pushAll(current->left);
-            }
-        }
-        return current->val;   
-    }
-    
-    bool hasNext() {
-        bool size=s.size();
-        return size;
-        
-    }
-};
-
-
-
 class Solution {
 public:
+    void traverse(TreeNode* root,unordered_set<int> &s){
+        if(!root) return;
+        traverse(root->left,s);
+        s.insert(root->val);
+        traverse(root->right,s);
+    }
     bool findTarget(TreeNode* root, int k) {
-        if(root==NULL) return false;
-        BSTIterator l(root,false);
-        BSTIterator r(root,true);
-        int i=l.next();
-        int j=r.next();
-        while(i<j){
-            if(i+j==k) return true;
-            else if(i+j<k) i=l.next();
-            else j=r.next();
+        unordered_set<int> s;
+        traverse(root,s);
+        for(auto ele:s){
+            int rem=k-ele;
+            if(rem == ele) continue;
+            if(s.find(rem)!=s.end()){
+                return true;
+            }
         }
         return false;
-        
-        
     }
 };
