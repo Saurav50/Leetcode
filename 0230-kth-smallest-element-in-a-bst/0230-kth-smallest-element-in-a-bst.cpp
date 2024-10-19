@@ -11,21 +11,15 @@
  */
 class Solution {
 public:
-    int kthSmallestHelper(TreeNode* root, int k,int &counter) {
-        if(root==NULL){
-            return -1;
-        }
-        
-        int left=kthSmallestHelper(root->left,k,counter);
-        if(left!=-1) return left;
-        counter++;
-        if(counter==k){
-            return root->val;
-        }
-        return kthSmallestHelper(root->right,k,counter);
+    void genInorder(TreeNode* root,vector<int>& in){
+        if(!root) return;
+        genInorder(root->left,in);
+        in.push_back(root->val);
+        genInorder(root->right,in);
     }
-    int kthSmallest(TreeNode* root, int k){
-        int counter=0;
-        return kthSmallestHelper(root,k,counter);
+    int kthSmallest(TreeNode* root, int k) {
+        vector<int> in;
+        genInorder(root,in);
+        return k-1>=0? in[k-1]:-1;
     }
 };
