@@ -1,21 +1,28 @@
 class Solution {
 public:
+    void dfs(int x,int y,vector<vector<int>>& img,int initColor,int color){
+        if(img[x][y]==initColor){
+            img[x][y]=color;
+        }
+        // Traverse in all 4 directions
+        vector<int> dirX = {-1, 1, 0, 0}; // Row adjustments
+        vector<int> dirY = {0, 0, -1, 1}; // Column adjustments
 
-    void dfs(vector<vector<int>>& image,int i,int j,int m,int n,int color,int initialColor){
-        if(i>=m||j>=n||i<0||j<0||image[i][j]!=initialColor) return;
-        image[i][j]=color;
-        dfs(image,i,j+1,m,n,color,initialColor);
-        dfs(image,i,j-1,m,n,color,initialColor);
-        dfs(image,i+1,j,m,n,color,initialColor);
-        dfs(image,i-1,j,m,n,color,initialColor);
+        for (int k = 0; k < 4; ++k) {
+            int newX = x + dirX[k];
+            int newY = y + dirY[k];
+
+            // Check if the new position is within bounds 
+            if (newX >= 0 && newX < img.size() && newY >= 0 && newY < img[0].size() &&img[newX][newY] == initColor) {
+                dfs(newX, newY, img,initColor,color); // Recurse
+            }
+        }
     }
     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
-        int m=image.size();
-        int n=image[0].size();
-        int initialColor=image[sr][sc];
-        if(color==initialColor) return image;
-        //perform dfs
-        dfs(image,sr,sc,m,n,color,initialColor);
+        int initColor=image[sr][sc];
+        if(initColor==color) return image;
+        dfs(sr,sc,image,initColor,color);
         return image;
+        
     }
 };
