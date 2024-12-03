@@ -65,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0485-max-consecutive-ones](https://github.com/Saurav50/Leetcode/tree/master/0485-max-consecutive-ones) |
 | [0496-next-greater-element-i](https://github.com/Saurav50/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0540-single-element-in-a-sorted-array](https://github.com/Saurav50/Leetcode/tree/master/0540-single-element-in-a-sorted-array) |
+| [0542-01-matrix](https://github.com/Saurav50/Leetcode/tree/master/0542-01-matrix) |
 | [0646-maximum-length-of-pair-chain](https://github.com/Saurav50/Leetcode/tree/master/0646-maximum-length-of-pair-chain) |
 | [0658-find-k-closest-elements](https://github.com/Saurav50/Leetcode/tree/master/0658-find-k-closest-elements) |
 | [0713-subarray-product-less-than-k](https://github.com/Saurav50/Leetcode/tree/master/0713-subarray-product-less-than-k) |
@@ -85,6 +86,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0124-binary-tree-maximum-path-sum](https://github.com/Saurav50/Leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/Saurav50/Leetcode/tree/master/0131-palindrome-partitioning) |
 | [0152-maximum-product-subarray](https://github.com/Saurav50/Leetcode/tree/master/0152-maximum-product-subarray) |
+| [0542-01-matrix](https://github.com/Saurav50/Leetcode/tree/master/0542-01-matrix) |
 | [0646-maximum-length-of-pair-chain](https://github.com/Saurav50/Leetcode/tree/master/0646-maximum-length-of-pair-chain) |
 | [1475-maximum-sum-bst-in-binary-tree](https://github.com/Saurav50/Leetcode/tree/master/1475-maximum-sum-bst-in-binary-tree) |
 ## Stack
@@ -224,6 +226,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Saurav50/Leetcode/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0200-number-of-islands](https://github.com/Saurav50/Leetcode/tree/master/0200-number-of-islands) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/Saurav50/Leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0542-01-matrix](https://github.com/Saurav50/Leetcode/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/Saurav50/Leetcode/tree/master/0547-number-of-provinces) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Saurav50/Leetcode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0662-maximum-width-of-binary-tree](https://github.com/Saurav50/Leetcode/tree/master/0662-maximum-width-of-binary-tree) |
@@ -235,6 +238,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0037-sudoku-solver](https://github.com/Saurav50/Leetcode/tree/master/0037-sudoku-solver) |
 | [0200-number-of-islands](https://github.com/Saurav50/Leetcode/tree/master/0200-number-of-islands) |
+| [0542-01-matrix](https://github.com/Saurav50/Leetcode/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/Saurav50/Leetcode/tree/master/0733-flood-fill) |
 | [1036-rotting-oranges](https://github.com/Saurav50/Leetcode/tree/master/1036-rotting-oranges) |
 ## Backtracking
