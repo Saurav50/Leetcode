@@ -75,6 +75,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1014-k-closest-points-to-origin](https://github.com/Saurav50/Leetcode/tree/master/1014-k-closest-points-to-origin) |
 | [1036-rotting-oranges](https://github.com/Saurav50/Leetcode/tree/master/1036-rotting-oranges) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/Saurav50/Leetcode/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
+| [1073-number-of-enclaves](https://github.com/Saurav50/Leetcode/tree/master/1073-number-of-enclaves) |
 | [1741-sort-array-by-increasing-frequency](https://github.com/Saurav50/Leetcode/tree/master/1741-sort-array-by-increasing-frequency) |
 | [3483-alternating-groups-ii](https://github.com/Saurav50/Leetcode/tree/master/3483-alternating-groups-ii) |
 | [3522-find-the-power-of-k-size-subarrays-i](https://github.com/Saurav50/Leetcode/tree/master/3522-find-the-power-of-k-size-subarrays-i) |
@@ -235,6 +236,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/Saurav50/Leetcode/tree/master/0733-flood-fill) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/Saurav50/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1036-rotting-oranges](https://github.com/Saurav50/Leetcode/tree/master/1036-rotting-oranges) |
+| [1073-number-of-enclaves](https://github.com/Saurav50/Leetcode/tree/master/1073-number-of-enclaves) |
 ## Matrix
 |  |
 | ------- |
@@ -244,6 +246,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0542-01-matrix](https://github.com/Saurav50/Leetcode/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/Saurav50/Leetcode/tree/master/0733-flood-fill) |
 | [1036-rotting-oranges](https://github.com/Saurav50/Leetcode/tree/master/1036-rotting-oranges) |
+| [1073-number-of-enclaves](https://github.com/Saurav50/Leetcode/tree/master/1073-number-of-enclaves) |
 ## Backtracking
 |  |
 | ------- |
@@ -349,6 +352,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0662-maximum-width-of-binary-tree](https://github.com/Saurav50/Leetcode/tree/master/0662-maximum-width-of-binary-tree) |
 | [0733-flood-fill](https://github.com/Saurav50/Leetcode/tree/master/0733-flood-fill) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/Saurav50/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
+| [1073-number-of-enclaves](https://github.com/Saurav50/Leetcode/tree/master/1073-number-of-enclaves) |
 | [1475-maximum-sum-bst-in-binary-tree](https://github.com/Saurav50/Leetcode/tree/master/1475-maximum-sum-bst-in-binary-tree) |
 ## Binary Tree
 |  |
@@ -433,6 +437,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0130-surrounded-regions](https://github.com/Saurav50/Leetcode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/Saurav50/Leetcode/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/Saurav50/Leetcode/tree/master/0547-number-of-provinces) |
+| [1073-number-of-enclaves](https://github.com/Saurav50/Leetcode/tree/master/1073-number-of-enclaves) |
 ## Graph
 |  |
 | ------- |
