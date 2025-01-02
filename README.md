@@ -359,6 +359,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0801-is-graph-bipartite](https://github.com/Saurav50/Leetcode/tree/master/0801-is-graph-bipartite) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/Saurav50/Leetcode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1073-number-of-enclaves](https://github.com/Saurav50/Leetcode/tree/master/1073-number-of-enclaves) |
+| [1300-critical-connections-in-a-network](https://github.com/Saurav50/Leetcode/tree/master/1300-critical-connections-in-a-network) |
 | [1475-maximum-sum-bst-in-binary-tree](https://github.com/Saurav50/Leetcode/tree/master/1475-maximum-sum-bst-in-binary-tree) |
 ## Binary Tree
 |  |
@@ -452,9 +453,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0210-course-schedule-ii](https://github.com/Saurav50/Leetcode/tree/master/0210-course-schedule-ii) |
 | [0547-number-of-provinces](https://github.com/Saurav50/Leetcode/tree/master/0547-number-of-provinces) |
 | [0801-is-graph-bipartite](https://github.com/Saurav50/Leetcode/tree/master/0801-is-graph-bipartite) |
+| [1300-critical-connections-in-a-network](https://github.com/Saurav50/Leetcode/tree/master/1300-critical-connections-in-a-network) |
 ## Topological Sort
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/Saurav50/Leetcode/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/Saurav50/Leetcode/tree/master/0210-course-schedule-ii) |
+## Biconnected Component
+|  |
+| ------- |
+| [1300-critical-connections-in-a-network](https://github.com/Saurav50/Leetcode/tree/master/1300-critical-connections-in-a-network) |
 <!---LeetCode Topics End-->
