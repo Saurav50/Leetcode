@@ -1,13 +1,14 @@
 class Solution {
 public:
-    void dfs(int node,vector<vector<int>>& adj,vector<int>& visited,vector<int>& tin,vector<int>& lowt,int time,vector<vector<int>>& ans,int parent){
+    void dfs(int node,vector<vector<int>>& adj,vector<int>& visited,vector<int>& tin,vector<int>& lowt,int &time,vector<vector<int>>& ans,int parent){
         visited[node]=1;
         tin[node]=time;
         lowt[node]=time;
+        time++;
         for(auto it:adj[node]){
             //skip for parent
             if (it == parent) continue;
-            if(!visited[it]) dfs(it,adj,visited,tin,lowt,time+1,ans,node);
+            if(!visited[it]) dfs(it,adj,visited,tin,lowt,time,ans,node);
             // update minimum
             lowt[node]=min(lowt[node],lowt[it]);
             // try to remove edge b/w node and its adjacent node
@@ -29,7 +30,8 @@ public:
         }
         vector<int> visited(n,0);
         vector<vector<int>> ans;
-        dfs(0, adj, visited, tin, lowt, 0, ans,-1);
+        int time=1;
+        dfs(0, adj, visited, tin, lowt,time, ans,-1);
          
         return ans;
 
